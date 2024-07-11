@@ -1,16 +1,14 @@
 html{
-  background-color:#343434 ;
- 
-
+  background-color:#eaeaea ;
 }
 body{
-  color: #B9D2D2;
+  color: #000000;
 }
 #homePage{
   margin: 0;
-  padding: 0;  
-
+  padding: 0;
 }
+
 nav{
 display: flex;
 align-items: center;
@@ -19,9 +17,11 @@ background-color:#055E68;
 padding: 0 60px;
 margin: 0 0;
 }
+
 nav img{
   height: 30px;
 }
+
 #side-bar{
   display: visible;
   height: 80vh;
