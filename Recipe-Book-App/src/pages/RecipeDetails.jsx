@@ -4,6 +4,7 @@ import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import Sidebar from "../components/Sidebar";
 import { Link, useParams } from "react-router-dom";
+import UpdateForm from "../components/UpdateForm";
 
 function RecipeDetails() {
 
@@ -27,6 +28,10 @@ function RecipeDetails() {
         <Link to="/">
           <button className="details-back-btn">Back</button>
         </Link>
+
+
+        <button>Edit</button>
+        <UpdateForm/>
       </div>
       <Footer />
     </>

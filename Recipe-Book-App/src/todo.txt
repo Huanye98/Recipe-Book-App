@@ -1,0 +1,12 @@
+[] componente tío con formulario para updatear la info
+crear id con números enormes con Math.random()
+el delete no funca - recipes is not defined
+recipe details use de referencia el state de recipes en vez de la list JSON
+imagen placeholder
+About - nombres, caras, git 
+
+s
+nombre para poryecto
+logo
+
+css

@@ -1,11 +1,10 @@
 import React from "react";
 import ListItem from "./ListItem";
-import { useState } from "react";
-import list from "../data/recipes.json";
 
 
-function RecipesList() {
-  const [recipes, setRecipes] = useState(list);
+function RecipesList(props) {
+ //const {recipes, setRecipes} = props
+// cuando se añade un objnuevo no hay id por lo que no hay key
 
   const handleDeleteRecipe = (id) => {
     const clone = [...recipes];
@@ -17,7 +16,7 @@ function RecipesList() {
 
   return (
     <div id="list-container">
-      {recipes.map((recipe)=> (
+      {props.recipes.map((recipe)=> (
         <ListItem
           key={recipe.id}
           recipe={recipe}
