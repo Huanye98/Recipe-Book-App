@@ -1,74 +1,185 @@
-html{
-  background-color:#eaeaea ;
+html {
+  background-color: #eaeaea;
 }
-body{
+body {
   color: #000000;
+  font-family: "Gordita regular";
 }
-#homePage{
+/*PAGES*/
+/*HomePage*/
+#homePage {
   margin: 0;
   padding: 0;
 }
-
-nav{
-display: flex;
-align-items: center;
-justify-content: space-between;
-background-color:#055E68;
-padding: 0 60px;
-margin: 0 0;
+/* About */
+.about-back-btn{
+  height: 100px;
+  width: 200px;
+  left:50%;
+  top: 50%;
+  position: absolute;
+  }
+  #about-h2{
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    font-family: "Gordita Medium";
+  }
+/*error 404*/
+  #sorry{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+  }
+/*Details*/
+.recipe-details{
+  left: 200px;
+  position: absolute;
+  border: solid yellow 2px;
+}
+.details-img-food{
+  background-size: cover;
+  width: 80vw;
+  height: 30vh;
+}
+.details-back-btn{
+  left: 50%;
+  bottom: 50%;
+  height: 100px;
+  width: 100px;
 }
 
-nav img{
+/* Components*/
+/* NAV */
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: auto;
+  position: fixed;
+  gap: 10px;
+
+  background-color: #055e68;
+
+  padding: 0 10px;
+  margin: 0 0;
+  z-index: 2;
+
+  width: 100vw;
+  height: 75px;
+ 
+  border: 1px solid red;
+}
+
+nav img {
   height: 30px;
 }
 
-#side-bar{
+
+/*SideBar*/
+
+#side-bar {
   display: visible;
-  height: 80vh;
-  width: 20vw;
-  border: solid 1px black;
+  height: 90vh;
+  width: 190px;
+  border: solid 1px blue;
+  position: fixed;
+  margin-top: 75px;
+  display: flex;
+  flex-direction: column;
 }
-footer{
-  height: 7vh;
+#side-bar *{
+  padding: 10px 10px
+  
+}
+/*Footer*/
+
+footer {
+  height: 50px;
   width: 100vw;
-  border: 1px solid black; 
+
+  background-color: #055e68;
+  border: 1px solid black;
+  color: white;
+
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 10px;
+
+  position: fixed;
+  bottom: 0;
 }
-footer a{
+footer a {
   text-decoration: none;
 }
-
-#list-container{
-  display: flex;
-  flex-wrap: wrap;
+footer a:visited{
+  color: white;
+}
+footer a:hover{
+  color: purple;
 }
 
-.recipe-container{
+footer img{
+  height: 30px;
+}
+/*List Container*/
+
+#list-container {
   display: flex;
-  border: 1px solid;
+  flex-wrap: wrap;
+  border: 1px solid red;
+  width: 80vw;
+  position: absolute;
+  right: 0;
+  margin: 70px 0;
+  left: 200px;
+  padding-bottom: 50px;
+
+}
+
+/* Items */
+.recipe-container {
+  display: flex;
   margin: 10px;
   flex-direction: column;
   width: 300px;
+  border-radius: 5px;
+  box-shadow: #bdbdbd 5px 5px  10px -2.5px;
+  background-color: white;
+}
+#card-button-div{
+  display: flex;
+  justify-content: space-evenly;
+
 }
 
-.recipe-container button{
-  display: flex;
+.recipe-container button {
+
   width: 100px;
-  justify-content: center;
-  align-items: center;
-  margin-left: 100px;
+  height: 20px;
+  border: none;
+  margin: 10px 5px;
+  background-color: rgb(247, 87, 161);
+  color: white;
+  border-radius: 2px;
 }
 
-.recipe-container h3{
+.recipe-container h3 {
   display: flex;
+  
+}
+.container-text{
+padding-left: 20px;
+box-shadow: inset 5px 0 10px 5px rgb(245, 244, 244);
 }
 
-.img-food{
+
+.img-food {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  height: 100px;
+  height: 150px;
+  border-radius: 5px 5px 0 0;
 }
+
+

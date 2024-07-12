@@ -1,44 +1,36 @@
-// import React from "react";
-// import list from "../data/recipes.json";
-// import { useParams } from "react-router-dom";
+import React from "react";
+import list from "../data/recipes.json";
+import Navbar from "../components/Navbar";
+import Footer from "../components/Footer";
+import Sidebar from "../components/Sidebar";
+import { Link, useParams } from "react-router-dom";
 
-// function RecipeDetails() {
-//   const params = useParams();
-//   const recipeInfoName = list.find((recipe) => recipe.name === params.recipeName);
+function RecipeDetails() {
 
-//   //  const params = useParams();
-//   //  const studentProfile = studentsData.find((student) => student._id === params.studentId);
-//   return (
-//     <div className="recipe-container">
-//       <div
-//         className="img-food"
-//         style={{ backgroundImage: `url(${recipeInfo.image})` }}
-//       ></div>
-//       <h3>
-//         {recipeInfo.name}{" "}
-//         {recipeInfo.calories >= 275 ? (
-//           <span className="emoji">❤️‍🩹</span>
-//         ) : (
-//           <span className="emoji">❤️</span>
-//         )}
-//       </h3>
-//       <div>
-//         <p>
-//           Calorías: <span>{recipeInfo.calories}</span>
-//         </p>
-//         <p>
-//           Servings: <span>{recipeInfo.servings}</span>
-//         </p>
-//       </div>
-//       <button className="btn-delete" onClick={() => handleDeleteRecipe(index)}>
-//         Delete
-//       </button>
+  let params = useParams()
+  let targetRecipe = list.find(e => e.id === params.recipeId)
 
-//       <Link to={`/recipes/${recipeInfo.id}`}>
-//         <button className="btn-view-more">Ver Más</button>
-//       </Link>
-//     </div>
-//   );
-// }
+  return (
+    <>
+      <Navbar />
+      <Sidebar />
+      <div className="recipe-details">
+        <div className="details-img-food" style={{ backgroundImage: `url(${targetRecipe.image})` }}></div>
+        <div className="details-container-text">
+          <h3>
+            {targetRecipe.name}
+            {targetRecipe.calories >= 275 ? (<span className="emoji">❤️‍🩹</span>) : (<span className="emoji">❤️</span>)}
+          </h3>
+          <p>Calorías: <span>{targetRecipe.calories}</span></p>
+          <p>Servings: <span>{targetRecipe.servings}</span></p>
+        </div>
+        <Link to="/">
+          <button className="details-back-btn">Back</button>
+        </Link>
+      </div>
+      <Footer />
+    </>
+  );
+}
 
-// export default RecipeDetails;
+export default RecipeDetails;
