@@ -1,11 +1,8 @@
 import React from "react";
-import list from "../data/recipes.json";
-import { Link, useParams } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 function ListItem(props) {
-  let { name, calories, servings, image, id } = props.recipe;
-  const params = useParams();
-  const targetItem =list.find (recipe=>recipe.id === params.recipeId);
+  let { name, calories, servings, image, id } = props.eachRecipe;
 
   return (
     <div className="recipe-container">
@@ -30,15 +27,15 @@ function ListItem(props) {
         </p>
       </div>
       <div id="card-button-div">
-      <button
-        className="btn-delete"
-        onClick={() => props.handleDeleteRecipe(id)}
-      >
-        Delete
-      </button>
-      <Link to={`recipes/${id}`} key={id}>
-      <button className="view-more">view more</button>
-      </Link>
+        <button
+          className="btn-delete"
+          onClick={() => props.handleDeleteRecipe(props.index)}
+        >
+          Delete
+        </button>
+        <Link to={`recipes/${id}`}>
+          <button className="view-more">view more</button>
+        </Link>
       </div>
     </div>
   );

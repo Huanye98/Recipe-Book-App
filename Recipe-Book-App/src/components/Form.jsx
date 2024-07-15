@@ -5,6 +5,7 @@ function Form(props) {
     const [servings,setServings] = useState(0)
     const [calories,setCalories] = useState(0)
     const [img,setImg] = useState("")
+    const [newId,setNewId] = useState(0);
 
     function handleName(event){
         setName(event.target.value)
@@ -25,11 +26,18 @@ function Form(props) {
         setServings(servings)
         setCalories(calories)
         setImg(img)
+        generateNewId();
         const newObject = {name,calories,servings,img}
 
         
         props.setRecipes([...props.recipes, newObject])
 
+        
+
+    }
+
+    function generateNewId(){
+        setNewId(Math.floor(Math.random()*10000000))
     }
 
   return (
