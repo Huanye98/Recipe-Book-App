@@ -1,6 +1,28 @@
 import React from "react";
 
 function UpdateForm(props) {
+
+
+
+  //  newName = event.target.value 
+
+  // fuction handleSubmbit(){
+
+  //   const newObject = {
+
+  //     setname(newName)
+
+  //   }
+
+  //   clone.splice(x)
+  //   clone.push(new object)
+
+  // }
+
+
+
+
+
   return (
     <div>
       <form>

@@ -1,10 +1,10 @@
 [] componente tío con formulario para updatear la info
 
+
+
+
 imagen placeholder
 About - nombres, caras, git 
-
-s
 nombre para poryecto
 logo
-
 css

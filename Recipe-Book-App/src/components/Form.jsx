@@ -4,7 +4,7 @@ function Form(props) {
     const [name,setName] = useState("")
     const [servings,setServings] = useState(0)
     const [calories,setCalories] = useState(0)
-    const [img,setImg] = useState("")
+    const [img,setImg] = useState('')
     const [newId,setNewId] = useState(0);
 
     function handleName(event){
@@ -25,8 +25,13 @@ function Form(props) {
         setName(name)
         setServings(servings)
         setCalories(calories)
-        setImg(img)
         generateNewId();
+
+        if(img === ""){
+            setImg("../assets/images.jpg")
+        }else{
+            setImg(img)
+        }
         const newObject = {name,calories,servings,img}
 
         
@@ -45,7 +50,7 @@ function Form(props) {
         <form onSubmit={handleSubmit}>
             <div>
             <label htmlFor="name"> Recipe name: </label>
-            <input type='text' name='name' onChange={handleName} value={name}></input>
+            <input type='text' name='name' placeholder='Enter recipe name' onChange={handleName} value={name}></input>
             <br />
             <label htmlFor="calories">Calories :</label>
             <input type='text' name='calories' onChange={handleCalories} value={calories}></input>
@@ -55,11 +60,13 @@ function Form(props) {
             <label htmlFor="servings"> Servings: </label>
             <input type='text' name='servings'  onChange={handleServings} value={servings}></input>
             <br />
+            
             <label htmlFor="image"> Image url: </label>
-            <input type="text" name='image' placeholder='../assets/burger-bar.png' onChange={handleImg} value={img}/>
+            <input type="text" name='image' placeholder="Enter image url" onChange={handleImg} value={img}/>
             <br />
-            <button type='submit'>Submit</button>
             </div>
+            <button type='submit'>Submit</button>
+            
         </form>
     </div>
   )

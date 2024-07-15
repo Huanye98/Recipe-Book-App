@@ -6,7 +6,7 @@ function HomePage(props) {
   const { recipes, setRecipes } = props;
 
   return (
-    <div>
+    <div id="home-page">
       <Form recipes={recipes} setRecipes={setRecipes} />
       <RecipesList recipes={recipes} setRecipes={setRecipes} />
     </div>

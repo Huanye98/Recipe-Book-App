@@ -21,8 +21,8 @@ function App() {
     <Sidebar />
     
     <Routes>
-      <Route path="/" element={<HomePage id="home-page" recipes={recipes} setRecipes={setRecipes}/>}></Route>
-      <Route path="/about" element={<About id="about" />}></Route>
+      <Route path="/" element={<HomePage recipes={recipes} setRecipes={setRecipes}/>}></Route>
+      <Route path="/about" element={<About />}></Route>
       <Route path="/recipes/:recipeId" element={<RecipeDetails recipes={recipes} setRecipes={setRecipes}/>}></Route>
 
       <Route path="*" element={<NotFoundPage id="not-found-page" />}></Route>
