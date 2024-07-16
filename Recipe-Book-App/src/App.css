@@ -3,7 +3,7 @@ html {
 }
 body {
   color: #000000;
-  font-family: "Gordita regular";
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 /*PAGES*/
 /*HomePage*/
@@ -13,7 +13,6 @@ body {
 }
 /* About */
 #about {
-  border: 1px solid red;
   margin: 70px 0 50px 0;
   display: flex;
   flex-direction: column;
@@ -47,18 +46,29 @@ body {
 .recipe-details {
   left: 200px;
   position: relative;
+  background-color: #ffffff;
+  padding-left: 20px;
 }
 .details-img-food {
   background-size: cover;
   width: 80vw;
   height: 30vh;
 }
-.details-back-btn {
-  left: 50%;
-  bottom: 50%;
-  height: 100px;
+
+.details-container-text{
+border-bottom: solid 1px rgb(214, 214, 214);
+padding-bottom: 12px;
+}
+
+.recipe-details button {
   width: 100px;
-  background-color: #a8a8a8;
+  height: 36px;
+  border: none;
+  margin: 10px 5px;
+  background-color: #ffffff;
+  border: solid 2px #ff8300;
+  color: #ff8300;
+  border-radius: 8px;
 }
 
 /* Components*/
@@ -71,43 +81,37 @@ nav {
   justify-content: auto;
   position: fixed;
   gap: 10px;
-
-  background-color: #dddddd;
-
+  background-color: #ffffff;
   padding: 0 20px;
   margin: 0 0;
   z-index: 2;
-
   width: 100%;
   height: 75px;
-
-
 }
 
 nav img {
   height: 30px;
 }
+
 #form-container {
   height: 125px;
-  width: 76vw;
   position: absolute;
-  margin-left: 190px;
-  margin-top: 70px;
+  margin: 56px 180px;
   padding-left: 20px;
+  padding-top: 20px;
   justify-content: center;
   align-items: center;
 }
+
 form {
   display: flex;
-  justify-content: flex-start;
-  align-items: flex-start;
   gap: 15px;
-  max-width: 600px;
   padding: 20px;
-  background-color: #fff;
-  border-radius: 5px;
   height: 150px;
+  margin-top: 20px;
+  background-color: #ffffff;
 }
+
 form div {
   display: flex;
   flex-direction: column;
@@ -124,10 +128,16 @@ form input{
 
 form button{
   font-weight: 600;
-  margin: 25px 10px;
   padding: 5px 10px;
-  border-radius: 5px;
+  width: 100px;
+  height: 36px;
+  border: none;
+  margin: 10px 5px;
+  background-color: #ff8300;
+  color: white;
+  border-radius: 8px;
 }
+
 /*SideBar*/
 
 #side-bar {
@@ -137,70 +147,66 @@ form button{
   top: 70px;
   display: flex;
   flex-direction: column;
-  background-color: #464646;
+  background-color: #ff8300;
   font-weight: 600;
-  
-  
 }
+
 #side-bar a {
   padding: 20px 20px;
   text-decoration: none;
   color: white;
 }
+
 /*Footer*/
 
 footer {
   height: 50px;
   width: 100vw;
-
-  background-color: #808080;
-  color: white;
-
+  background-color: #e3e3e3;
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 10px;
-
   position: fixed;
   bottom: 0;
 }
+
 footer a {
   text-decoration: none;
 }
 footer a:visited {
-  color: white;
+  color: rgb(96, 96, 96);
 }
 footer a:hover {
-  color: purple;
+  color: #ffffff;
 }
-
 footer img {
   height: 30px;
 }
+
 /*List Container*/
 
 #list-container {
   display: flex;
   flex-wrap: wrap;
-  width: 80vw;
+  justify-content: flex-start;
   position: absolute;
-  right: 0;
-  margin: 300px 0;
   left: 200px;
+  margin: 290px 0;
   padding-bottom: 50px;
-  justify-content: space-evenly;
 }
 
 /* Items */
 .recipe-container {
   display: flex;
-  margin: 10px;
+  margin: 12px;
   flex-direction: column;
   width: 300px;
   border-radius: 5px;
   box-shadow: #bdbdbd 5px 5px 10px -2.5px;
   background-color: white;
 }
+
 #card-button-div {
   display: flex;
   justify-content: space-evenly;
@@ -208,17 +214,16 @@ footer img {
 
 .recipe-container button {
   width: 100px;
-  height: 20px;
+  height: 36px;
   border: none;
   margin: 10px 5px;
-  background-color: rgb(247, 87, 161);
-  color: white;
-  border-radius: 2px;
+  background-color: #ffffff;
+  border: solid 2px #ff8300;
+  color: #ff8300;
+  border-radius: 8px;
 }
 
-.recipe-container h3 {
-  display: flex;
-}
+
 .container-text {
   padding-left: 20px;
   box-shadow: inset 5px 0 10px 5px rgb(245, 244, 244);
@@ -230,4 +235,13 @@ footer img {
   background-position: center;
   height: 150px;
   border-radius: 5px 5px 0 0;
+}
+
+#update-form button{
+  width: 100px;
+  height: 36px;
+  margin: 10px 5px;
+  background-color: #ff8300;
+  color: #ffffff;
+  border-radius: 8px;
 }

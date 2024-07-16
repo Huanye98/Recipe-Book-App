@@ -6,7 +6,7 @@ import HomePage from '../pages/HomePage';
 function Sidebar() {
   return (
     <div id='side-bar'>
-      <Link to="/" element={<HomePage />}>HomePage  </Link>
+      <Link to="/" element={<HomePage />}>Home</Link>
       <Link to="/about" element={<About id="about" />}>About</Link>
     </div>
   )

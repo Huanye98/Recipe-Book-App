@@ -1,31 +1,35 @@
-import React from "react";
+import React, { useState } from "react";
 
 function UpdateForm(props) {
+  const [name, setName] = useState("");
+  const [servings, setServings] = useState(0);
+  const [calories, setCalories] = useState(0);
 
+  const {targetRecipe, recipes, setRecipes} = props
 
+  function handleName(event) {
+    setName(event.target.value);
+  }
+  function handleServings(event) {
+    setServings(event.target.value);
+  }
+  function handleCalories(event) {
+    setCalories(event.target.value);
+  }
 
-  //  newName = event.target.value 
-
-  // fuction handleSubmbit(){
-
-  //   const newObject = {
-
-  //     setname(newName)
-
-  //   }
-
-  //   clone.splice(x)
-  //   clone.push(new object)
-
-  // }
-
-
-
-
+  function handleSubmit(event) {
+    event.preventDefault();
+    targetRecipe.name = name
+    targetRecipe.calories = calories
+    targetRecipe.servings = servings
+    recipes.splice(recipes.indexOf(targetRecipe), 1)
+    const clone = [...recipes, targetRecipe]
+    setRecipes(clone)
+  }
 
   return (
-    <div>
-      <form>
+    <div id="update-form">
+      <form onSubmit={handleSubmit}>
         <div>
           <label htmlFor="name"> Recipe name: </label>
           <input
@@ -54,6 +58,7 @@ function UpdateForm(props) {
           ></input>
           <br />
         </div>
+          <button type="submit">Save</button>
       </form>
     </div>
   );

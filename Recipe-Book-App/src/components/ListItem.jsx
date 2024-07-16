@@ -34,7 +34,7 @@ function ListItem(props) {
           Delete
         </button>
         <Link to={`recipes/${id}`}>
-          <button className="view-more">view more</button>
+          <button className="view-more">View more</button>
         </Link>
       </div>
     </div>

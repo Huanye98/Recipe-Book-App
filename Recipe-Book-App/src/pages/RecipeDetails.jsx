@@ -1,10 +1,18 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link, useParams } from "react-router-dom";
 import UpdateForm from "../components/UpdateForm";
 
 function RecipeDetails(props) {
   let params = useParams();
   let targetRecipe = props.recipes.find((e) => e.id === params.recipeId);
+
+  const { recipes, setRecipes } = props;
+
+  const [isEditBtnShowing, setIsEditBtnShowing] = useState(false);
+
+  const handleEditBtn = () => {
+    setIsEditBtnShowing(!isEditBtnShowing);
+  };
 
   return (
     <>
@@ -28,13 +36,22 @@ function RecipeDetails(props) {
           <p>
             Servings: <span>{targetRecipe.servings}</span>
           </p>
-        </div>
         <Link to="/">
           <button className="details-back-btn">Back</button>
         </Link>
 
-        <button>Edit</button>
-        <UpdateForm />
+        <button type="edit" onClick={handleEditBtn}>
+          Edit
+        </button>
+        </div>
+        {isEditBtnShowing && (
+          <UpdateForm
+            targetRecipe={targetRecipe}
+            recipes={recipes}
+            setRecipes={setRecipes}
+            setIsEditBtnShowing={setIsEditBtnShowing}
+          />
+        )}
       </div>
     </>
   );
