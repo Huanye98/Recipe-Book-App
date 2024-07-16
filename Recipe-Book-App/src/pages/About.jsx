@@ -10,7 +10,7 @@ function About() {
       <div id="creadores">
       <h3>Made by:</h3>
         <ul>
-          <li>Michelle srnedni</li>
+          <li>Michelle sredni</li>
           <li>Mario lázaro</li>
           <li>Huanye zhu</li>
         </ul>
